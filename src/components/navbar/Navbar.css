@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   margin: 20px 170px;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background- 0.3s ease, color 0.3s ease;
 }
 
 /* Nav Menu */
@@ -46,26 +46,6 @@
 
 .nav-connect:hover {
   transform: scale(1.05);
-}
-
-/* Theme Toggle Button */
-.theme-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 6px;
-  margin-left: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.theme-toggle svg {
-  stroke: currentColor;
-  color: inherit;
-  width: 24px;
-  height: 24px;
-  transition: color 0.3s ease;
 }
 
 /* Mobile Menu Icons */
@@ -132,29 +112,4 @@
     flex-direction: row;
     gap: 15px;
   }
-
-  .theme-toggle {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    z-index: 1001;
-  }
-}
-
-/* ===== Dark Theme Global Styles (added in index.css or global CSS) ===== */
-body.dark-theme {
-  background-color: #121212;
-  color: #f1f1f1;
-}
-
-body.dark-theme .navbar {
-  background-color: #1e1e1e;
-}
-
-body.dark-theme .nav-menu {
-  background-color: #1e1e1e;
-}
-
-body.dark-theme .nav-connect {
-  color: white;
 }
