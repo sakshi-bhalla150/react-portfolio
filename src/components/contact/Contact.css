@@ -199,3 +199,25 @@
     padding: 10px 30px;
   }
 }
+/* ========== Light Theme Overrides ========== */
+body:not(.dark-theme) .contact-left p,
+body:not(.dark-theme) .contact-details,
+body:not(.dark-theme) .contact-right label {
+  color: #000; /* All regular text in black */
+}
+
+body:not(.dark-theme) .contact-right input,
+body:not(.dark-theme) .contact-right textarea {
+  background: #f2f2f2;
+  color: #111;
+}
+
+body:not(.dark-theme) .contact {
+  color: black;
+}
+
+/* Optional: Light theme contact section background (if needed)
+body:not(.dark-theme) .contact {
+  background-color: #ffffff;
+}
+*/

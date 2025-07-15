@@ -3,27 +3,16 @@
   align-items: center;
   justify-content: space-between;
   margin: 20px 170px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* Nav Menu */
 .nav-menu {
   display: flex;
   align-items: center;
   list-style: none;
   gap: 60px;
   font-size: 20px;
-}
-
-.nav-connect {
-  padding: 20px 40px;
-  border-radius: 50px;
-  background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
-  font-size: 22px;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-.nav-connect:hover {
-  transform: scale(1.05);
 }
 
 .nav-menu li {
@@ -38,11 +27,48 @@
   margin: auto;
 }
 
+/* Anchor Links */
 .anchor-link {
   text-decoration: none;
+  color: inherit;
+}
+
+/* Connect Button */
+.nav-connect {
+  padding: 20px 40px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.5s;
   color: white;
 }
 
+.nav-connect:hover {
+  transform: scale(1.05);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle svg {
+  stroke: currentColor;
+  color: inherit;
+  width: 24px;
+  height: 24px;
+  transition: color 0.3s ease;
+}
+
+/* Mobile Menu Icons */
 .nav-mob-open {
   display: none;
 }
@@ -106,4 +132,29 @@
     flex-direction: row;
     gap: 15px;
   }
+
+  .theme-toggle {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 1001;
+  }
+}
+
+/* ===== Dark Theme Global Styles (added in index.css or global CSS) ===== */
+body.dark-theme {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-theme .navbar {
+  background-color: #1e1e1e;
+}
+
+body.dark-theme .nav-menu {
+  background-color: #1e1e1e;
+}
+
+body.dark-theme .nav-connect {
+  color: white;
 }

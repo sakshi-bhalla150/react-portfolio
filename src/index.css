@@ -1,10 +1,26 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-body{
+
+/* Default body styles */
+body {
   height: 100vh;
+  background: #161513; /* Default dark theme */
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  transition: background- 0.3s ease, color 0.3s ease;
+}
+
+/* Light Theme (default when dark mode is off) */
+body:not(.dark-theme) {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* Dark Theme override */
+body.dark-theme {
   background: #161513;
   color: white;
-  font-family: outfit;
 }
