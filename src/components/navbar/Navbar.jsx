@@ -3,6 +3,7 @@ import './Navbar.css';
 import underline from '../../assets/nav_underline.svg';
 import menu_open from '../../assets/menu_open.svg';
 import menu_close from '../../assets/menu_close.svg';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
@@ -36,37 +37,37 @@ const Navbar = () => {
         />
 
         <li>
-          <a className='anchor-link' href="#home" onClick={() => handleLinkClick("home")}>
+          <AnchorLink className='anchor-link' href="#home" onClick={() => handleLinkClick("home")}>
             Home
-          </a>
+          </AnchorLink>
           {menu === "home" && <img src={underline} alt="underline" />}
         </li>
 
         <li>
-          <a className='anchor-link' href="#about" onClick={() => handleLinkClick("about")}>
+          <AnchorLink className='anchor-link' offset={50}  href="#about" onClick={() => handleLinkClick("about")}>
             About Me
-          </a>
+          </AnchorLink>
           {menu === "about" && <img src={underline} alt="underline" />}
         </li>
 
         <li>
-          <a className='anchor-link' href="#projects" onClick={() => handleLinkClick("projects")}>
+          <AnchorLink className='anchor-link' offset={50}  href="#projects" onClick={() => handleLinkClick("projects")}>
             Projects
-          </a>
+          </AnchorLink>
           {menu === "projects" && <img src={underline} alt="underline" />}
         </li>
 
         <li>
-          <a className='anchor-link' href="#contact" onClick={() => handleLinkClick("contact")}>
+          <AnchorLink className='anchor-link' offset={50}  href="#contact" onClick={() => handleLinkClick("contact")}>
             Contact
-          </a>
+          </AnchorLink>
           {menu === "contact" && <img src={underline} alt="underline" />}
         </li>
       </ul>
 
       {/* Connect Button (desktop only) */}
       <div className='nav-connect'>
-        <a className='anchor-link' href="#contact">Connect with Me</a>
+        <AnchorLink className='anchor-link' offset={50}  href="#contact">Connect with Me</AnchorLink>
       </div>
     </div>
   );
